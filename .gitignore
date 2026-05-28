@@ -5,7 +5,3 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 
-data/
-results/
-*.zip
-*.pt

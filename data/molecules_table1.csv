@@ -1,0 +1,26 @@
+molecule,formula,C,H,N,O,Ip_eV,partition1_test,partition2_test,official_file
+Ethanal,C2H4O,2,4,0,1,10.23,False,True,C2H4O_converted_interped.txt
+Propanal,C3H6O,3,6,0,1,9.96,False,True,C3H6O_propanal_converted_interped.txt
+Butanal,C4H8O,4,8,0,1,9.82,False,False,C4H8O_butanal_converted_interped.txt
+2-Methylpropanal,C4H8O,4,8,0,1,9.71,True,False,C4H8O_2-methylpropanal_converted_interped.txt
+Ethoxyethane,C4H10O,4,10,0,1,9.51,False,False,C4H10O_converted_interped.txt
+Propoxypropane,C6H14O,6,14,0,1,9.3,False,False,C6H14O_propoxypropane_converted_interped.txt
+2-Isopropoxypropane,C6H14O,6,14,0,1,9.2,False,False,C6H14O_2-isopropoxypropane_converted_interped.txt
+Propanone,C3H6O,3,6,0,1,9.7,True,False,C3H6O_propanone_converted_interped.txt
+Butanone,C4H8O,4,8,0,1,9.52,False,False,C4H8O_butanone_converted_interped.txt
+Pentan-2-one,C5H10O,5,10,0,1,9.38,False,False,C5H10O_pentan-2-one_converted_interped.txt
+Pentan-3-one,C5H10O,5,10,0,1,9.31,False,False,C5H10O_pentan-3-one_converted_interped.txt
+3-Methylbutan-2-one,C5H10O,5,10,0,1,9.31,False,True,C5H10O_3-methylbutan-2-one_converted_interped.txt
+Hexan-3-one,C6H12O,6,12,0,1,9.3,True,False,C6H12O_hexan-3-one_converted_interped.txt
+Hexan-2-one,C6H12O,6,12,0,1,9.35,False,False,C6H12O_hexan-2-one_converted_interped.txt
+"3,3-Dimethylbutan-2-one",C6H12O,6,12,0,1,9.14,True,False,C6H12O_3-3-dimethylbutan-2-one_converted_interped.txt
+3-Methylpentan-2-one,C6H12O,6,12,0,1,9.2,False,False,C6H12O_3-methylpentan-2-one_converted_interped.txt
+4-Methylpentan-2-one,C6H12O,6,12,0,1,9.3,False,False,C6H12O_4-methylpentan-2-one_converted_interped.txt
+Molecular Hydrogen,H2,0,2,0,0,15.43,False,False,H2_converted_interped.txt
+Molecular Nitrogen,N2,0,0,2,0,15.58,False,True,N2_converted_interped.txt
+Carbon Monoxide,CO,1,0,0,1,14.01,False,False,CO_converted_interped.txt
+Nitric Oxide,NO,0,0,1,1,9.26,False,False,NO_converted_interped.txt
+Molecular Oxygen,O2,0,0,0,2,12.07,False,False,O2_converted_interped.txt
+Methanol,CH4O,1,4,0,1,10.84,True,False,CH4O_converted_interped.txt
+Ethanol,C2H6O,2,6,0,1,10.48,False,True,C2H6O_converted_interped.txt
+Water,H2O,0,2,0,1,12.62,False,False,H2O_converted_interped.txt
