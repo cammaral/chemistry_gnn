@@ -1,19 +1,39 @@
-# Harris–Nepomuceno + GNN full article-comparison project
+# Harris & Nepomuceno baseline + GNN project
 
-This project keeps the previous PyTorch/GNN implementation and adds scripts to compare against more of the article, not only Table 2.
+This project keeps the previous Harris--Nepomuceno reproduction files and adds a complete first GNN pipeline.
 
 ## What is included
 
-- Official Figshare interpolated datasets converted to `data/ionization_cross_sections_25.csv`.
-- Reproduction-style Harris networks: Net10, Net15, Net20, with and without ionization potential.
-- Descriptor MLP baselines.
-- Molecular graph energy model / GNN baselines.
-- Article-reference outputs:
-  - Figure 2-style plot of the official interpolated experimental curves.
-  - Figure 3/4/5-style plots from your reproduced runs.
-  - Figure 6-style predictions using the official Figshare saved Net25 weights.
-  - Table 2 and Table 3 reference CSV files.
-- A general `run_all_experiments_tqdm.py` runner with tqdm.
+### Original/baseline reproduction
+
+- `reproduce_mathematica_like.py`  
+  PyTorch port of the Mathematica architecture.
+
+- `run_official_wolfram.wl`  
+  Route to run with Wolfram/Mathematica if you have `wolframscript` installed.
+
+- `plot_wolfram_outputs.py`  
+  Plots the Wolfram outputs.
+
+- `official_mathematica/pmx_codes.zip`  
+  Original Figshare ZIP that you provided.
+
+### New GNN/ML models
+
+- `molecular_graphs.py`  
+  Self-contained hard-coded molecular graphs for all 25 molecules. No RDKit required.
+
+- `train_mlp_descriptors.py`  
+  Descriptor baseline: formula/energy plus optional simple graph descriptors.
+
+- `train_gnn_energy_model.py`  
+  Pure-PyTorch graph neural network: molecular graph + energy -> cross section.
+
+- `compare_all_models.py`  
+  Collects all model summaries and creates comparison CSV/plot.
+
+- `run_full_pipeline.py`  
+  Convenience runner for baseline + descriptor MLP + GNN.
 
 ## Install
 
@@ -23,51 +43,111 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Fast smoke test
+The project uses only common packages: `numpy`, `pandas`, `matplotlib`, and `torch`.
+No RDKit or PyTorch Geometric is needed.
+
+## 1. Check the molecular graphs
 
 ```bash
-python run_all_experiments_tqdm.py --quick
+python molecular_graphs.py
 ```
 
-This uses 2 seeds and reduced epochs. It is useful to test if your environment is working, but it is not a final research run.
+Expected output:
 
-## Research run
+```text
+All hard-coded molecular graphs match molecules_table1.csv formulas.
+```
+
+## 2. Reproduce the Harris--Nepomuceno PyTorch baseline
+
+Quick test:
 
 ```bash
-python run_all_experiments_tqdm.py \
-  --seeds 1,2,3,4,5,6,7,8,9,10 \
-  --harris-epochs 400000 \
-  --mlp-epochs 50000 \
-  --gnn-epochs 30000
+python reproduce_mathematica_like.py --partition 2 --net 20 --epochs 20000 --seeds 1,2,3 --optimizer adam --float64
 ```
 
-This runs:
+Article-scale run:
 
-- Harris Net10/15/20, partitions 1 and 2, without and with Ip.
-- Descriptor MLP, partitions 1 and 2, with/without Ip and with/without extra graph descriptors.
-- GNN energy models, partitions 1 and 2, minmax-MSE, minmax-relative, and log-MSE targets.
-- Article-style plots and summary comparison tables.
+```bash
+python reproduce_mathematica_like.py --partition 2 --net 20 --epochs 400000 --seeds 1,2,3,4,5 --optimizer adam --float64
+```
 
-## Main outputs
+This prints a final check against Table 2.
 
-Look at:
+## 3. Train the descriptor MLP baseline
+
+```bash
+python train_mlp_descriptors.py \
+  --partition 2 \
+  --epochs 10000 \
+  --seeds 1,2,3,4,5 \
+  --graph-descriptors
+```
+
+This model uses scalar samples:
 
 ```text
-results/article_reference/
-results/comparison_to_article_table2_all_models.csv
-results/comparison_to_article_table2_overall.csv
-results/comparison_all_models_by_molecule.csv
-results/comparison_all_models_overall.csv
+molecule descriptors + electron energy -> sigma(E)
 ```
 
-The most important metric for comparison with the paper is:
+## 4. Train the GNN model
 
-```text
-max_percent_difference
+```bash
+python train_gnn_energy_model.py \
+  --partition 2 \
+  --epochs 10000 \
+  --seeds 1,2,3,4,5 \
+  --target minmax \
+  --loss mse \
+  --positive-clip
 ```
 
-because this is the metric reported in Table 2 of the article.
+A useful alternative for small targets such as N2 is relative loss:
 
-## Important note
+```bash
+python train_gnn_energy_model.py \
+  --partition 2 \
+  --epochs 10000 \
+  --seeds 1,2,3,4,5 \
+  --target minmax \
+  --loss relative \
+  --positive-clip
+```
 
-The article used Mathematica `NetTrain` with default settings. The PyTorch implementation follows the architecture and preprocessing closely, but it is not bit-for-bit identical to Mathematica. For the most faithful run, use the included Wolfram route (`run_official_wolfram.wl`) if you have Wolfram installed.
+## 5. Run everything quickly
+
+```bash
+python run_full_pipeline.py --partition 2 --epochs 3000 --baseline-epochs 20000 --seeds 1,2,3
+```
+
+For serious runs, increase epochs and seeds.
+
+## 6. Compare all models
+
+```bash
+python compare_all_models.py
+```
+
+Outputs are saved in `results/`:
+
+- `comparison_all_models_by_molecule.csv`
+- `comparison_all_models_overall.csv`
+- `comparison_all_models.png`
+
+Each model directory also contains:
+
+- `summary_mean_prediction.csv`
+- `metrics_by_seed.csv`
+- `predictions_all_seeds.npz`
+- `figure_mean_predictions.png`
+- `loss_curves.png`
+
+## Scientific use
+
+The clean comparison is:
+
+1. Harris-Net reproduction: composition only, vector output.
+2. Descriptor MLP: formula + simple graph descriptors + energy.
+3. GNN: molecular connectivity + energy.
+
+The main research question is whether the graph representation improves cases where formula-only information is insufficient, especially isomers and out-of-distribution molecules such as molecular nitrogen.

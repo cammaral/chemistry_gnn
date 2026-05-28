@@ -211,11 +211,9 @@ def main():
     p.add_argument("--positive-clip", action="store_true")
     p.add_argument("--float64", action="store_true")
     p.add_argument("--device", type=str, default="cpu")
-    p.add_argument("--threads", type=int, default=1, help="Torch CPU threads. Keep 1 on laptops to avoid small-matrix slowdown.")
     p.add_argument("--log-every", type=int, default=500)
     p.add_argument("--quiet", action="store_true")
     args = p.parse_args()
-    torch.set_num_threads(args.threads)
 
     meta, energies, curves = load_table_and_curves()
     train_names, test_names = split_names(meta, args.partition)

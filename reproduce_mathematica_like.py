@@ -340,12 +340,10 @@ def main():
     ap.add_argument("--lr", type=float, default=1e-2)
     ap.add_argument("--log-every", type=int, default=10000)
     ap.add_argument("--device", type=str, default="cpu")
-    ap.add_argument("--threads", type=int, default=1, help="Torch CPU threads. Keep 1 on laptops to avoid small-matrix slowdown.")
     ap.add_argument("--float64", action="store_true")
     ap.add_argument("--quiet", action="store_true")
     ap.add_argument("--tolerance-pp", type=float, default=10.0, help="Tolerance in percentage points vs Table 2.")
     args = ap.parse_args()
-    torch.set_num_threads(args.threads)
 
     RESULTS_DIR.mkdir(exist_ok=True)
     seeds = [int(s.strip()) for s in args.seeds.split(",") if s.strip()]

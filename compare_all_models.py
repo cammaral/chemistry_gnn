@@ -10,15 +10,6 @@ ROOT = Path(__file__).resolve().parent
 RESULTS = ROOT / "results"
 
 
-def normalize_summary(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-    if "max_percent_difference" not in df.columns and "mean_curve_max_percent_difference" in df.columns:
-        df["max_percent_difference"] = df["mean_curve_max_percent_difference"]
-    if "mape_percent" not in df.columns and "mean_curve_mape_percent" in df.columns:
-        df["mape_percent"] = df["mean_curve_mape_percent"]
-    return df
-
-
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--results-dir", type=Path, default=RESULTS)
@@ -26,14 +17,11 @@ def main():
     rows = []
     for path in sorted(args.results_dir.glob("*/summary_mean_prediction.csv")):
         model = path.parent.name
-        df = normalize_summary(pd.read_csv(path))
-        if "molecule" not in df or "max_percent_difference" not in df or "mape_percent" not in df:
-            print(f"Skipping {path}: missing expected metric columns")
-            continue
+        df = pd.read_csv(path)
         df.insert(0, "model", model)
         rows.append(df)
     if not rows:
-        raise FileNotFoundError(f"No compatible summary_mean_prediction.csv files found under {args.results_dir}")
+        raise FileNotFoundError(f"No summary_mean_prediction.csv files found under {args.results_dir}")
     all_df = pd.concat(rows, ignore_index=True)
     args.results_dir.mkdir(parents=True, exist_ok=True)
     all_df.to_csv(args.results_dir / "comparison_all_models_by_molecule.csv", index=False)
