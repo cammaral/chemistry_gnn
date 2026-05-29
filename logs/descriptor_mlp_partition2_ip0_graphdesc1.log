@@ -1,0 +1,20 @@
+COMMAND: /home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 2 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64 --graph-descriptors
+
+/home/camaral/Research/chemistry_gnn/.venv/lib/python3.12/site-packages/torch/autograd/graph.py:882: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 804: forward compatibility was attempted on non supported HW (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+
+================================================================================================
+FINAL CHECK: resumo de desempenho para descriptor_mlp_partition2_ip0_graphdesc1_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+================================================================================================
+           molecule  mape_percent  max_percent_difference  rmse_a0_2  mae_a0_2  max_abs_error_a0_2  article_table2_max_percent  delta_vs_article_pp
+            Ethanal        50.095                  62.322     10.478    10.416              12.260                        13.0               49.322
+           Propanal         7.904                  10.779      2.324     2.312               2.791                         6.0                4.779
+3-Methylbutan-2-one         9.270                  13.031      4.710     4.657               5.443                        13.0                0.031
+ Molecular Nitrogen       210.681                1173.686      1.275     1.096               2.626                        30.0             1143.686
+            Ethanol        17.638                  30.535      4.532     4.135               7.066                        26.0                4.535
+
+Saved results in: /home/camaral/Research/chemistry_gnn/results/descriptor_mlp_partition2_ip0_graphdesc1_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+
+
+RETURN_CODE=0
+ELAPSED_SECONDS=10425.02

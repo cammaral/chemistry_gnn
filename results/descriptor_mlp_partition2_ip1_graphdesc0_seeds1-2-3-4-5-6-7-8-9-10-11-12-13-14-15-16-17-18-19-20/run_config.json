@@ -1,0 +1,53 @@
+{
+  "partition": 2,
+  "seeds": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+  "epochs": 120000,
+  "lr": 0.001,
+  "hidden": 64,
+  "depth": 3,
+  "weight_decay": 0.0001,
+  "include_ip": true,
+  "graph_descriptors": false,
+  "float64": true,
+  "device": "cpu",
+  "threads": 1,
+  "log_every": 6000,
+  "quiet": true,
+  "feature_names": [
+    "C",
+    "H",
+    "N",
+    "O",
+    "energy_eV",
+    "Ip_eV"
+  ],
+  "train_names": [
+    "Butanal",
+    "2-Methylpropanal",
+    "Ethoxyethane",
+    "Propoxypropane",
+    "2-Isopropoxypropane",
+    "Propanone",
+    "Butanone",
+    "Pentan-2-one",
+    "Pentan-3-one",
+    "Hexan-3-one",
+    "Hexan-2-one",
+    "3,3-Dimethylbutan-2-one",
+    "3-Methylpentan-2-one",
+    "4-Methylpentan-2-one",
+    "Molecular Hydrogen",
+    "Carbon Monoxide",
+    "Nitric Oxide",
+    "Molecular Oxygen",
+    "Methanol",
+    "Water"
+  ],
+  "test_names": [
+    "Ethanal",
+    "Propanal",
+    "3-Methylbutan-2-one",
+    "Molecular Nitrogen",
+    "Ethanol"
+  ]
+}
