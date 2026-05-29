@@ -1,0 +1,7 @@
+COMMAND: /home/camaral/Research/chemistry_gnn/.venv/bin/python article_outputs_and_figures.py --fig2 --fig6
+
+Saved article reference outputs in /home/camaral/Research/chemistry_gnn/results/article_reference
+
+
+RETURN_CODE=0
+ELAPSED_SECONDS=0.99

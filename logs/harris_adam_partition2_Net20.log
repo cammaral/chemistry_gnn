@@ -1,0 +1,24 @@
+COMMAND: /home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 20 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64
+
+/home/camaral/Research/chemistry_gnn/.venv/lib/python3.12/site-packages/torch/autograd/graph.py:882: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 804: forward compatibility was attempted on non supported HW (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Running partition2_Net20_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+epochs=400000, lr=0.01, seeds=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+FINAL CHECK: ficou próximo do artigo?
+====================================================================================================
+           molecule  mean_curve_mape_percent  mean_curve_max_percent_difference  article_table2_max_percent  delta_vs_article_pp  close_to_article
+            Ethanal                   12.114                             13.516                      13.000                0.516              True
+           Propanal                    3.870                              6.942                       6.000                0.942              True
+3-Methylbutan-2-one                    8.907                             13.040                      13.000                0.040              True
+ Molecular Nitrogen                   39.046                             56.225                      30.000               26.225             False
+            Ethanol                   12.407                             25.315                      26.000               -0.685              True
+====================================================================================================
+VEREDITO: PARCIALMENTE MUITO BOM. Ficou próximo para 4/5; investigar as moléculas marcadas como False.
+
+Saved results in: /home/camaral/Research/chemistry_gnn/results/partition2_Net20_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+Main plot: /home/camaral/Research/chemistry_gnn/results/partition2_Net20_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20/figure_partition2_Net20_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20.png
+
+
+RETURN_CODE=0
+ELAPSED_SECONDS=1790.62

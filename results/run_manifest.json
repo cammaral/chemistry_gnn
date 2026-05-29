@@ -1,0 +1,180 @@
+{
+  "profile": "huge",
+  "seeds": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+  "harris_epochs": 400000,
+  "mlp_epochs": 120000,
+  "gnn_epochs": 100000,
+  "n_jobs": 34,
+  "jobs": [
+    {
+      "name": "article_static_fig2_fig6",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python article_outputs_and_figures.py --fig2 --fig6",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/article_static_fig2_fig6.log"
+    },
+    {
+      "name": "harris_adam_partition1_Net10",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 10 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net10.log"
+    },
+    {
+      "name": "harris_adam_partition1_Net10Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 10 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net10Ip.log"
+    },
+    {
+      "name": "harris_adam_partition1_Net15",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 15 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net15.log"
+    },
+    {
+      "name": "harris_adam_partition1_Net15Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 15 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net15Ip.log"
+    },
+    {
+      "name": "harris_adam_partition1_Net20",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 20 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net20.log"
+    },
+    {
+      "name": "harris_adam_partition1_Net20Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 20 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net20Ip.log"
+    },
+    {
+      "name": "harris_adam_partition2_Net10",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 10 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net10.log"
+    },
+    {
+      "name": "harris_adam_partition2_Net10Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 10 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net10Ip.log"
+    },
+    {
+      "name": "harris_adam_partition2_Net15",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 15 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net15.log"
+    },
+    {
+      "name": "harris_adam_partition2_Net15Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 15 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net15Ip.log"
+    },
+    {
+      "name": "harris_adam_partition2_Net20",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 20 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net20.log"
+    },
+    {
+      "name": "harris_adam_partition2_Net20Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 20 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net20Ip.log"
+    },
+    {
+      "name": "harris_lbfgs_partition1_Net20",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 20 --epochs 25000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer lbfgs --lr 0.1 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition1_Net20.log"
+    },
+    {
+      "name": "harris_lbfgs_partition1_Net20Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 20 --epochs 25000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer lbfgs --lr 0.1 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition1_Net20Ip.log"
+    },
+    {
+      "name": "harris_lbfgs_partition2_Net20",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 20 --epochs 25000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer lbfgs --lr 0.1 --threads 1 --log-every 20000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition2_Net20.log"
+    },
+    {
+      "name": "harris_lbfgs_partition2_Net20Ip",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 2 --net 20 --epochs 25000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer lbfgs --lr 0.1 --threads 1 --log-every 20000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition2_Net20Ip.log"
+    },
+    {
+      "name": "descriptor_mlp_partition1_ip0_graphdesc0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 1 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip0_graphdesc0.log"
+    },
+    {
+      "name": "descriptor_mlp_partition1_ip0_graphdesc1",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 1 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64 --graph-descriptors",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip0_graphdesc1.log"
+    },
+    {
+      "name": "descriptor_mlp_partition1_ip1_graphdesc0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 1 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip1_graphdesc0.log"
+    },
+    {
+      "name": "descriptor_mlp_partition1_ip1_graphdesc1",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 1 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64 --include-ip --graph-descriptors",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip1_graphdesc1.log"
+    },
+    {
+      "name": "descriptor_mlp_partition2_ip0_graphdesc0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 2 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition2_ip0_graphdesc0.log"
+    },
+    {
+      "name": "descriptor_mlp_partition2_ip0_graphdesc1",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 2 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64 --graph-descriptors",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition2_ip0_graphdesc1.log"
+    },
+    {
+      "name": "descriptor_mlp_partition2_ip1_graphdesc0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 2 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64 --include-ip",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition2_ip1_graphdesc0.log"
+    },
+    {
+      "name": "descriptor_mlp_partition2_ip1_graphdesc1",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descriptors.py --partition 2 --epochs 120000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --lr 0.001 --hidden 64 --depth 3 --weight-decay 0.0001 --threads 1 --log-every 6000 --quiet --float64 --include-ip --graph-descriptors",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition2_ip1_graphdesc1.log"
+    },
+    {
+      "name": "gnn_partition1_minmax_mse_h64_mp2_drop0p0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_gnn_energy_model.py --partition 1 --epochs 100000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --batch-size 256 --lr 0.002 --weight-decay 0.0001 --hidden 64 --mp-layers 2 --head-hidden 64 --head-depth 2 --dropout 0.0 --target minmax --loss mse --positive-clip --threads 1 --log-every 5000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/gnn_partition1_minmax_mse_h64_mp2_drop0p0.log"
+    },
+    {
+      "name": "gnn_partition1_minmax_relative_h64_mp2_drop0p0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_gnn_energy_model.py --partition 1 --epochs 100000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --batch-size 256 --lr 0.002 --weight-decay 0.0001 --hidden 64 --mp-layers 2 --head-hidden 64 --head-depth 2 --dropout 0.0 --target minmax --loss relative --positive-clip --threads 1 --log-every 5000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/gnn_partition1_minmax_relative_h64_mp2_drop0p0.log"
+    },
+    {
+      "name": "gnn_partition1_log_mse_h64_mp2_drop0p0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_gnn_energy_model.py --partition 1 --epochs 100000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --batch-size 256 --lr 0.002 --weight-decay 0.0001 --hidden 64 --mp-layers 2 --head-hidden 64 --head-depth 2 --dropout 0.0 --target log --loss mse --positive-clip --threads 1 --log-every 5000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/gnn_partition1_log_mse_h64_mp2_drop0p0.log"
+    },
+    {
+      "name": "gnn_partition2_minmax_mse_h64_mp2_drop0p0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_gnn_energy_model.py --partition 2 --epochs 100000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --batch-size 256 --lr 0.002 --weight-decay 0.0001 --hidden 64 --mp-layers 2 --head-hidden 64 --head-depth 2 --dropout 0.0 --target minmax --loss mse --positive-clip --threads 1 --log-every 5000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/gnn_partition2_minmax_mse_h64_mp2_drop0p0.log"
+    },
+    {
+      "name": "gnn_partition2_minmax_relative_h64_mp2_drop0p0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_gnn_energy_model.py --partition 2 --epochs 100000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --batch-size 256 --lr 0.002 --weight-decay 0.0001 --hidden 64 --mp-layers 2 --head-hidden 64 --head-depth 2 --dropout 0.0 --target minmax --loss relative --positive-clip --threads 1 --log-every 5000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/gnn_partition2_minmax_relative_h64_mp2_drop0p0.log"
+    },
+    {
+      "name": "gnn_partition2_log_mse_h64_mp2_drop0p0",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python train_gnn_energy_model.py --partition 2 --epochs 100000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --batch-size 256 --lr 0.002 --weight-decay 0.0001 --hidden 64 --mp-layers 2 --head-hidden 64 --head-depth 2 --dropout 0.0 --target log --loss mse --positive-clip --threads 1 --log-every 5000 --quiet --float64",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/gnn_partition2_log_mse_h64_mp2_drop0p0.log"
+    },
+    {
+      "name": "article_fig345_and_table2_comparison",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python article_outputs_and_figures.py --fig345 --compare",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/article_fig345_and_table2_comparison.log"
+    },
+    {
+      "name": "compare_all_models",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python compare_all_models.py",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/compare_all_models.log"
+    },
+    {
+      "name": "generate_final_report",
+      "cmd": "/home/camaral/Research/chemistry_gnn/.venv/bin/python generate_final_report.py",
+      "log": "/home/camaral/Research/chemistry_gnn/logs/generate_final_report.log"
+    }
+  ]
+}

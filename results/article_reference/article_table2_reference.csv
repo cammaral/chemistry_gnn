@@ -1,0 +1,11 @@
+partition,molecule,Net20_max_percent,Net20Ip_max_percent
+1,Propanone,14,16
+1,2-Methylpropanal,4,5
+1,Hexan-3-one,7,7
+1,"3,3-Dimethylbutan-2-one",5,6
+1,Methanol,12,9
+2,Ethanal,13,14
+2,Ethanol,26,23
+2,Propanal,6,8
+2,3-Methylbutan-2-one,13,12
+2,Molecular Nitrogen,30,1940

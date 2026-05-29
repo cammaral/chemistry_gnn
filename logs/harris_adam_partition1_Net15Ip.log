@@ -1,0 +1,24 @@
+COMMAND: /home/camaral/Research/chemistry_gnn/.venv/bin/python reproduce_mathematica_like.py --partition 1 --net 15 --epochs 400000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --optimizer adam --lr 0.01 --threads 1 --log-every 20000 --quiet --float64 --include-ip
+
+/home/camaral/Research/chemistry_gnn/.venv/lib/python3.12/site-packages/torch/autograd/graph.py:882: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 804: forward compatibility was attempted on non supported HW (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Running partition1_Net15Ip_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+epochs=400000, lr=0.01, seeds=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+FINAL CHECK: ficou próximo do artigo?
+====================================================================================================
+               molecule  mean_curve_mape_percent  mean_curve_max_percent_difference  article_table2_max_percent  delta_vs_article_pp  close_to_article
+       2-Methylpropanal                    4.591                              6.561                       5.000                1.561              True
+              Propanone                   13.217                             18.212                      16.000                2.212              True
+            Hexan-3-one                    3.484                              5.881                       7.000               -1.119              True
+3,3-Dimethylbutan-2-one                    4.317                              6.401                       6.000                0.401              True
+               Methanol                    3.471                              8.741                       9.000               -0.259              True
+====================================================================================================
+VEREDITO: SIM. Ficou próximo do artigo para 5/5 moléculas dentro de ±10 pontos percentuais.
+
+Saved results in: /home/camaral/Research/chemistry_gnn/results/partition1_Net15Ip_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+Main plot: /home/camaral/Research/chemistry_gnn/results/partition1_Net15Ip_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20/figure_partition1_Net15Ip_adam_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20.png
+
+
+RETURN_CODE=0
+ELAPSED_SECONDS=1815.44

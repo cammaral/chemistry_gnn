@@ -1,0 +1,107 @@
+[
+  {
+    "name": "article_static_fig2_fig6",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/article_static_fig2_fig6.log"
+  },
+  {
+    "name": "harris_adam_partition1_Net10",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net10.log"
+  },
+  {
+    "name": "harris_adam_partition1_Net10Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net10Ip.log"
+  },
+  {
+    "name": "harris_adam_partition1_Net15",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net15.log"
+  },
+  {
+    "name": "harris_adam_partition1_Net15Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net15Ip.log"
+  },
+  {
+    "name": "harris_adam_partition1_Net20",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net20.log"
+  },
+  {
+    "name": "harris_adam_partition1_Net20Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition1_Net20Ip.log"
+  },
+  {
+    "name": "harris_adam_partition2_Net10",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net10.log"
+  },
+  {
+    "name": "harris_adam_partition2_Net10Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net10Ip.log"
+  },
+  {
+    "name": "harris_adam_partition2_Net15",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net15.log"
+  },
+  {
+    "name": "harris_adam_partition2_Net15Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net15Ip.log"
+  },
+  {
+    "name": "harris_adam_partition2_Net20",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net20.log"
+  },
+  {
+    "name": "harris_adam_partition2_Net20Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_adam_partition2_Net20Ip.log"
+  },
+  {
+    "name": "harris_lbfgs_partition1_Net20",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition1_Net20.log"
+  },
+  {
+    "name": "harris_lbfgs_partition1_Net20Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition1_Net20Ip.log"
+  },
+  {
+    "name": "harris_lbfgs_partition2_Net20",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition2_Net20.log"
+  },
+  {
+    "name": "harris_lbfgs_partition2_Net20Ip",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/harris_lbfgs_partition2_Net20Ip.log"
+  },
+  {
+    "name": "descriptor_mlp_partition1_ip0_graphdesc0",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip0_graphdesc0.log"
+  },
+  {
+    "name": "descriptor_mlp_partition1_ip0_graphdesc1",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip0_graphdesc1.log"
+  },
+  {
+    "name": "descriptor_mlp_partition1_ip1_graphdesc0",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip1_graphdesc0.log"
+  },
+  {
+    "name": "descriptor_mlp_partition1_ip1_graphdesc1",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition1_ip1_graphdesc1.log"
+  }
+]

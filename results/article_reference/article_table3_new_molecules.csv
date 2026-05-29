@@ -1,0 +1,28 @@
+category,molecule,formula,C,H,N,O
+Alkanes,Methane,CH4,1,4,0,0
+Alkanes,Ethane,C2H6,2,6,0,0
+Alkanes,Propane,C3H8,3,8,0,0
+Alkanes,Butane,C4H10,4,10,0,0
+Alkanes,Pentane,C5H12,5,12,0,0
+Alkanes,Hexane,C6H14,6,14,0,0
+Alkanes,Heptane,C7H16,7,16,0,0
+Alkanes,Octane,C8H18,8,18,0,0
+Alkenes,Ethene,C2H4,2,4,0,0
+Alkenes,Prop-1-ene,C3H6,3,6,0,0
+Alkenes,But-1-ene,C4H8,4,8,0,0
+Alkenes,Pent-1-ene,C5H10,5,10,0,0
+Alkenes,Hex-1-ene,C6H12,6,12,0,0
+Alkenes,Hept-1-ene,C7H14,7,14,0,0
+Alkenes,Oct-1-ene,C8H16,8,16,0,0
+Ring structures,Benzene,C6H6,6,6,0,0
+Ring structures,Cyclopropane,C3H6,3,6,0,0
+Ring structures,Cyclobutane,C4H8,4,8,0,0
+Ring structures,Cyclopentane,C5H10,5,10,0,0
+Ring structures,Vanillin,C8H8O3,8,8,0,3
+Ring structures,Naphthalene,C10H8,10,8,0,0
+Ring structures,Pyridine,C5H5N,5,5,1,0
+Ring structures,Pyrimidine,C4H4N2,4,4,2,0
+Nucleotide bases,Adenine,C5H5N5,5,5,5,0
+Nucleotide bases,Thymine,C5H6N2O2,5,6,2,2
+Nucleotide bases,Cytosine,C4H5N3O,4,5,3,1
+Nucleotide bases,Guanine,C5H5N5O,5,5,5,1
