@@ -1,0 +1,4 @@
+COMMAND: /home/camaral/Research/chemistry_gnn/.venv/bin/python train_gnn_energy_model.py --partition 1 --epochs 100000 --seeds 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 --batch-size 256 --lr 0.002 --weight-decay 0.0001 --hidden 64 --mp-layers 2 --head-hidden 64 --head-depth 2 --dropout 0.0 --target minmax --loss mse --positive-clip --threads 1 --log-every 5000 --quiet --float64
+
+/home/camaral/Research/chemistry_gnn/.venv/lib/python3.12/site-packages/torch/autograd/graph.py:882: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 804: forward compatibility was attempted on non supported HW (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass

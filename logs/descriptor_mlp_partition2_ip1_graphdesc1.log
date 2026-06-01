@@ -2,3 +2,19 @@ COMMAND: /home/camaral/Research/chemistry_gnn/.venv/bin/python train_mlp_descrip
 
 /home/camaral/Research/chemistry_gnn/.venv/lib/python3.12/site-packages/torch/autograd/graph.py:882: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 804: forward compatibility was attempted on non supported HW (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
   return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+
+================================================================================================
+FINAL CHECK: resumo de desempenho para descriptor_mlp_partition2_ip1_graphdesc1_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+================================================================================================
+           molecule  mape_percent  max_percent_difference  rmse_a0_2  mae_a0_2  max_abs_error_a0_2  article_table2_max_percent  delta_vs_article_pp
+            Ethanal         5.442                   7.706      1.214     1.175               1.596                        14.0               -6.294
+           Propanal        13.958                  35.909      4.003     3.841               6.081                         8.0               27.909
+3-Methylbutan-2-one         5.347                   9.460      2.655     2.641               3.136                        12.0               -2.540
+ Molecular Nitrogen      2782.081                8055.414     17.800    17.791              18.367                      1940.0             6115.414
+            Ethanol        13.700                  44.635      3.378     2.937               6.574                        23.0               21.635
+
+Saved results in: /home/camaral/Research/chemistry_gnn/results/descriptor_mlp_partition2_ip1_graphdesc1_seeds1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-20
+
+
+RETURN_CODE=0
+ELAPSED_SECONDS=10432.65

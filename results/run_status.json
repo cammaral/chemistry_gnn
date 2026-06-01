@@ -118,5 +118,10 @@
     "name": "descriptor_mlp_partition2_ip1_graphdesc0",
     "status": "done",
     "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition2_ip1_graphdesc0.log"
+  },
+  {
+    "name": "descriptor_mlp_partition2_ip1_graphdesc1",
+    "status": "done",
+    "log": "/home/camaral/Research/chemistry_gnn/logs/descriptor_mlp_partition2_ip1_graphdesc1.log"
   }
 ]
